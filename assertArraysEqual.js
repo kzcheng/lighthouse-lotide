@@ -26,3 +26,4 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 // [TEST CODE]
+assertArraysEqual();
