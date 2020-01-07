@@ -1,6 +1,10 @@
 // [MANUAL IMPORT]
 const eqArrays = function(a1, a2) {
   // Check
+  if (!a1 || !a2) {
+    return false;
+  }
+
   if (a1.length !== a2.length) {
     return false;
   }
@@ -26,4 +30,4 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 // [TEST CODE]
-assertArraysEqual();
+assertArraysEqual([1,2,3]);
