@@ -1,4 +1,4 @@
-// FUNCTION IMPLEMENTATION
+// [FUNCTION IMPLEMENTATION]
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`Assertion Passed: [${actual}] === [${expected}]`);
@@ -9,6 +9,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
+// [TEST CODE]
 assertEqual("Bootcamp", "Bootcamp");
 assertEqual(42, "42");
