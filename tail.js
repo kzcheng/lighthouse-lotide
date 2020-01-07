@@ -4,4 +4,5 @@ const tail = function(array) {
 };
 
 // TEST CODE
-console.log(tail([1,2,3]));
+const words = [];
+console.log(tail(words));
