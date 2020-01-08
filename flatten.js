@@ -1,14 +1,16 @@
 // [FUNCTION IMPLEMENTATION]
 const flatten = function(source) {
+
   let returnObj = [];
 
-  for (const element of source) {
-    if (!element.isArray) {
-      returnObj.push(element);
+  for (const ele of source) {
+    // console.log(`Working on ${ele}`);
+    // console.log(`ele.isArray: ${ele.isArray}`);
+    if (!Array.isArray(ele)) {
+      returnObj.push(ele);
     } else {
-      let flattenedElement = flatten(element);
-      for (const element of source) {
-        returnObj.push(element);
+      for (const eoe of ele) { // eoe: element of element
+        returnObj.push(eoe);
       }
     }
   }
@@ -18,3 +20,4 @@ const flatten = function(source) {
 
 // [TEST CODE]
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
+// console.log();
