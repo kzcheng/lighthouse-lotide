@@ -9,7 +9,34 @@ const w = console.warn.bind(console);
 const e = console.error.bind(console);
 
 // [Function Implementation]
-const countLetters = function() {
+const initAlphabet = function() {
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let returnObj = {};
+
+  for (const letter of alphabet) {
+    returnObj[letter] = 0;
+  }
+
+  return returnObj;
+};
+
+const countLetters = function(given) {
+  const returnObj = initAlphabet();
+
+  for (const char of given) {
+    if (char.toUpperCase() in returnObj) {
+      returnObj[char.toUpperCase()]++;
+    }
+  }
+
+  for (const entry in returnObj) {
+    if (!returnObj[entry]) {
+      delete returnObj[entry];
+    }
+  }
+
+  return returnObj;
 };
 
 // [Testing Code]
+l(countLetters("lighthouse in the house"));
