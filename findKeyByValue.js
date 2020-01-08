@@ -10,8 +10,22 @@ const e = console.error.bind(console);
 
 
 // [Function Implementation]
-const name = function() {
+const findKeyByValue = function(list, value) {
+  for (const entry in list) {
+    if (list[entry] === value) {
+      return entry;
+    }
+  }
+  
+  return undefined;
 };
 
 // [Testing Code]
-l(name());
+const bestTVShowsByGenre = {
+  sciFi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+
+d(findKeyByValue(bestTVShowsByGenre, "The Wire"));
+d(findKeyByValue(bestTVShowsByGenre, "That '70s Show"));
