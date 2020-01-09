@@ -26,7 +26,9 @@ const eqObjects = function(obj1, obj2) {
   }
   
   for (const key in obj1) {
-    if (obj1[key] !== obj2[key]) {
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+      
+    } else if (obj1[key] !== obj2[key]) {
       return false;
     }
   }
