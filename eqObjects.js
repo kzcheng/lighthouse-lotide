@@ -3,7 +3,20 @@
 const l = console.log.bind(console);
 
 // [Manual Imports]
-// Empty
+const eqArrays = function(a1, a2) {
+  // Check
+  if (a1.length !== a2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < a1.length; i++) {
+    if (a1[i] !== a2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
 
 // [Function Implementation]
 const eqObjects = function(obj1, obj2) {
