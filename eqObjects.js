@@ -1,16 +1,24 @@
 // [Shortened Commonly Used Functions]
 // eslint-disable-next-line no-unused-vars
 const l = console.log.bind(console);
-// eslint-disable-next-line no-unused-vars
-const d = console.debug.bind(console);
-// eslint-disable-next-line no-unused-vars
-const w = console.warn.bind(console);
-// eslint-disable-next-line no-unused-vars
-const e = console.error.bind(console);
 
+// [Manual Imports]
+// Empty
 
 // [Function Implementation]
-const eqObjects = function(object1, object2) {
+const eqObjects = function(obj1, obj2) {
+  // Check
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
+  
+  for (const key in obj1) {
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  
+  return true;
 };
 
 
@@ -21,3 +29,10 @@ l(eqObjects(ab, ba)); // => true
 
 const abc = { a: "1", b: "2", c: "3" };
 l(eqObjects(ab, abc)); // => false
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+l(eqObjects(cd, dc)); // => true
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+l(eqObjects(cd, cd2)); // => false
