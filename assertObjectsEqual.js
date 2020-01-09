@@ -3,12 +3,55 @@
 const l = console.log.bind(console);
 
 // [Manual Imports]
-// Empty
+const eqArrays = function(a1, a2) {
+  // l(a1, a2);
+
+  // Check
+  if (a1.length !== a2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < a1.length; i++) {
+    if (a1[i] !== a2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const eqObjects = function(obj1, obj2) {
+  // Check
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
+  
+  for (const key in obj1) {
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+      // l(obj1[key], obj2[key]);
+      if (!eqArrays(obj1[key], obj2[key])) {
+        return false;
+      }
+    } else if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  
+  return true;
+};
 
 
 // [Function Implementation]
-const name = function() {
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(`Assertion Passed: [${inspect(actual)}] === [${inspect(expected)}]`);
+    return true;
+  } else {
+    console.log(`Assertion Failed: [${inspect(actual)}] !== [${inspect(expected)}]`);
+    return false;
+  }
 };
 
 // [Testing Code]
-l(name());
+l(assertObjectsEqual({a:1,b:2}, {b:2,a:1}));
