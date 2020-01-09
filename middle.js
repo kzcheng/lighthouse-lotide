@@ -16,3 +16,5 @@ const middle = function(array) {
 
 // [TEST CODE]
 console.log(middle([1,2]));
+
+// test, git is working very funny
