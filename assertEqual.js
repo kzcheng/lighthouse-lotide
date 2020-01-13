@@ -1,4 +1,8 @@
-// [FUNCTION IMPLEMENTATION]
+// [Shortened Commonly Used Functions]
+// eslint-disable-next-line no-unused-vars
+const l = console.log.bind(console);
+
+// [Function Implementation]
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`Assertion Passed: [${actual}] === [${expected}]`);
@@ -9,6 +13,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// [TEST CODE]
+// [Testing Code]
 assertEqual("Bootcamp", "Bootcamp");
 assertEqual(42, "42");
+
+// [Export]
+module.exports = assertEqual;
