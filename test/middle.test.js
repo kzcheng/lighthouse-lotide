@@ -4,7 +4,7 @@ const middle = require('../middle');
 
 // [Testing Code]
 // by @kzcheng
-describe("#middle", () => {
+describe(`#middle`, () => {
   it(`given [1], return []`, () => {
     assert.deepEqual(middle([1]), []);
   });
@@ -22,6 +22,6 @@ describe("#middle", () => {
   });
 
   it('given undefined return undefined', () => {
-    assert.deepEqual(middle(), []);
+    assert.deepEqual(middle(), undefined);
   });
 });

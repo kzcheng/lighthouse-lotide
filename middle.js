@@ -2,7 +2,7 @@
 const middle = function(array) {
   let returnArray = [];
   if (!array) {
-    return returnArray;
+    return array;
   }
 
   if (array.length <= 2) {
