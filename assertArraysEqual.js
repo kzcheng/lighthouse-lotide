@@ -1,24 +1,7 @@
-// [MANUAL IMPORT]
-const eqArrays = function(a1, a2) {
-  // Check
-  if (!a1 || !a2) {
-    return false;
-  }
+// [Imports]
+const eqArrays = require('./eqArrays');
 
-  if (a1.length !== a2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < a1.length; i++) {
-    if (a1[i] !== a2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-// [FUNCTION IMPLEMENTATION]
+// [Function Implementation]
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`Assertion Passed: [${actual}] === [${expected}]`);
@@ -29,5 +12,5 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-// [TEST CODE]
-assertArraysEqual([1,2,3]);
+// [Export]
+module.exports = assertArraysEqual;
