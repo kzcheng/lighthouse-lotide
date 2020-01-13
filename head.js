@@ -11,5 +11,5 @@ const head = function(array) {
   return array[0];
 };
 
-// [Testing Code]
-assertEqual();
+// [Export]
+module.exports = head;
