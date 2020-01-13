@@ -10,8 +10,5 @@ const l = console.log.bind(console);
 const name = function() {
 };
 
-// [Testing Code]
-l(name());
-
 // [Export]
 module.exports = name;
