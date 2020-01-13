@@ -14,8 +14,8 @@ const assertEqual = function(actual, expected) {
 };
 
 // [Testing Code]
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(42, "42");
+// assertEqual("Bootcamp", "Bootcamp");
+// assertEqual(42, "42");
 
 // [Export]
 module.exports = assertEqual;
