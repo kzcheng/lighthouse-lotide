@@ -1,6 +1,9 @@
 // [Function Implementation]
 const middle = function(array) {
   let returnArray = [];
+  if (!array) {
+    return returnArray;
+  }
 
   if (array.length <= 2) {
     return returnArray;
