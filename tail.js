@@ -1,8 +1,7 @@
-// [FUNCTION IMPLEMENTATION]
+// [Function Implementation]
 const tail = function(array) {
   return array.slice(1);
 };
 
-// [TEST CODE]
-const words = [];
-console.log(tail(words));
+// [Export]
+module.exports = tail;
