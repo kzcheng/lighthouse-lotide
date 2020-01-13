@@ -1,4 +1,4 @@
-// [FUNCTION IMPLEMENTATION]
+// [Function Implementation]
 const middle = function(array) {
   let returnArray = [];
 
@@ -14,4 +14,5 @@ const middle = function(array) {
   return returnArray;
 };
 
+// [Export]
 module.exports = middle;
