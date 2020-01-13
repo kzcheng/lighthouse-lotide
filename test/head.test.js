@@ -1,9 +1,14 @@
 // [Imports]
-// eslint-disable-next-line no-unused-vars
-const assertEqual = require('../assertEqual');
-// eslint-disable-next-line no-unused-vars
+const assert = require('chai').assert;
 const head = require('../head');
 
 // [Testing Code]
-assertEqual(head([1,2,3]), 1);
-assertEqual(head([]), undefined);
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+  
+  it("returns '5' for ['5']", () => {
+    assert.strictEqual(head(['5']), '5');
+  });
+});
