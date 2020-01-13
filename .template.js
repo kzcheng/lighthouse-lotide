@@ -1,4 +1,4 @@
-// [Requirements]
+// [Imports]
 // eslint-disable-next-line no-unused-vars
 const assertEqual = require('./assertEqual');
 
@@ -12,3 +12,6 @@ const name = function() {
 
 // [Testing Code]
 l(name());
+
+// [Export]
+module.exports = name;
