@@ -15,5 +15,5 @@ const without = function(source, itemsToRemove) {
   return returnObj;
 };
 
-// [TEST CODE]
-console.log(without(["hello", "world", "lighthouse"], ["lighthouse"]));
+// [Export]
+module.exports = without;

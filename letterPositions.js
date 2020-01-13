@@ -38,5 +38,5 @@ const letterPositions = function(given) {
   return returnObj;
 };
 
-// [Testing Code]
-l(letterPositions("lighthouse in the house"));
+// [Export]
+module.exports = letterPositions;

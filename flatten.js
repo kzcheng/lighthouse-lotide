@@ -18,6 +18,5 @@ const flatten = function(source) {
   return returnObj;
 };
 
-// [TEST CODE]
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
-// console.log();
+// [Export]
+module.exports = flatten;

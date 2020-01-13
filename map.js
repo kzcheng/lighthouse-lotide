@@ -15,8 +15,5 @@ const map = function(array, callback) {
   return returnArray;
 };
 
-// [Testing Code]
-const words = ["ground", "control", "to", "major", "tom"];
-console.log(map(words, name => name.length));
-const results1 = map(words, word => word[0]);
-console.log(results1);
+// [Export]
+module.exports = map;

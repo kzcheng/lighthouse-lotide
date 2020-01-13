@@ -9,3 +9,4 @@ const tail = function(array) {
 
 // [Export]
 module.exports = tail;
+

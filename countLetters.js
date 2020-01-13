@@ -38,5 +38,5 @@ const countLetters = function(given) {
   return returnObj;
 };
 
-// [Testing Code]
-l(countLetters("lighthouse in the house"));
+// [Export]
+module.exports = countLetters;

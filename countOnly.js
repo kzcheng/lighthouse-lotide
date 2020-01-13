@@ -26,23 +26,5 @@ const countOnly = function(allItems, itemsToCount) {
   return returnObj;
 };
 
-// [Testing Code]
-// l("test");
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
-l(result);
-
-// let a = {};
-// a["test"] = 12;
-// l(a);
+// [Export]
+module.exports = countOnly;
