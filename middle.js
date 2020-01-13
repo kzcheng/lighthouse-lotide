@@ -14,7 +14,4 @@ const middle = function(array) {
   return returnArray;
 };
 
-// [TEST CODE]
-console.log(middle([1,2]));
-
-// test, git is working very funny
+module.exports = middle;
