@@ -4,8 +4,6 @@ const flatten = function(source) {
   let returnObj = [];
 
   for (const ele of source) {
-    // console.log(`Working on ${ele}`);
-    // console.log(`ele.isArray: ${ele.isArray}`);
     if (!Array.isArray(ele)) {
       returnObj.push(ele);
     } else {

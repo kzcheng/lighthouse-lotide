@@ -1,6 +1,10 @@
 // [Imports]
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const name = require('../name');
 
 // [Testing Code]
-assertEqual(name, undefined);
+describe(`#name`, () => {
+  it(``, () => {
+    assert.deepEqual(name());
+  });
+});
