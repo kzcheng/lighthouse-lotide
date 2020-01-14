@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@kzcheng/lotide",
   "version": "1.0.0",
-  "description": "There are a few functions here but they aren't implemented yet.",
+  "description": "This lotide is written as a homework for Lighthouse Labs.",
   "directories": {
     "test": "test"
   },
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/kzcheng/lotide.git"
   },
-  "author": "",
+  "author": "kzcheng",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kzcheng/lotide/issues"
