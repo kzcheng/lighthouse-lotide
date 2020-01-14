@@ -1,6 +1,6 @@
 {
   "name": "@kzcheng/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This lotide is written as a homework for Lighthouse Labs.",
   "directories": {
     "test": "test"
